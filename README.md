@@ -46,11 +46,11 @@
 
 ### サンプル5：ポストエフェクト
 
-- `Assets/ShaderGraphTutorial/05_PostProcessing/PostProcessingDiagonalStripe.unity`
+- `Assets/ShaderGraphTutorial/05_PostProcessing/PostProcessing.unity`
 
 ![サンプル5：ポストエフェクト: SphereFold](Docs/05_1_Postprocessing_SphereFold.png)
 
-- `Assets/ShaderGraphTutorial/05_PostProcessing/PostProcessingDistortion.unity`
+- `Assets/ShaderGraphTutorial/05_PostProcessing/PostProcessingDiagonalStripe.unity`
 
 ![サンプル5：ポストエフェクト: DiagonalStripe](Docs/05_8_DiagonalStripe.png)
 
