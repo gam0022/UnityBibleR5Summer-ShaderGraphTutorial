@@ -36,6 +36,8 @@
 
 ![サンプル3：ToonシェーダーとCustom Function](Docs/03_5_ToonShader.png)
 
+ユニティちゃん © Unity Technologies Japan/UCL
+
 ### サンプル4：プロシージャルテクスチャ
 
 - `Assets/ShaderGraphTutorial/04_ProceduralTexture/ProceduralTexture.unity`
