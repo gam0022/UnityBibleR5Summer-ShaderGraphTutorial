@@ -27,7 +27,15 @@
 
 - `Assets/ShaderGraphTutorial/02_Dissolve/Dissolve.unity`
 
-![サンプル2：ディゾルブシェーダー](Docs/02_Dissolve.png)
+![サンプル2-1：ディゾルブシェーダー](Docs/02_Dissolve.png)
+
+- `Assets/ShaderGraphTutorial/02_Dissolve/Dissolve_fBM.unity`
+
+![サンプル2-2：ディゾルブシェーダー（fBM）](Docs/02_5_2_ResultfBM.png)
+
+- `Assets/ShaderGraphTutorial/02_Dissolve/Dissolve_fBM_UV.unity`
+
+![サンプル2-3：ディゾルブシェーダー（fBM + 縦方向のUV）](Docs/02_7_1_ResultfBM_UV.png)
 
 ### サンプル3：ToonシェーダーとCustom Function
 
@@ -66,10 +74,10 @@
 
 サンプルコードはMITライセンスですが、外部アセットについては以下のライセンスにしたがってください。
 
-- UnityChan
+- [Assets/UnityChan](Assets/UnityChan)
     - © Unity Technologies Japan/UCL
     - [ユニティちゃんライセンス条項](https://unity-chan.com/contents/guideline/)
-- Cobblestone Floor 08 Texture • Poly Haven
+- [Assets/Textures/PolyHaven/cobblestone_floor_08_4k.blend](Assets/Textures/PolyHaven/cobblestone_floor_08_4k.blend)
     - Author: Rob Tuytel
     - [ダウンロード元](https://polyhaven.com/a/cobblestone_floor_08)
     - CC0ライセンス
