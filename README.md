@@ -31,11 +31,11 @@
 
 - `Assets/ShaderGraphTutorial/02_Dissolve/Dissolve_fBM.unity`
 
-![サンプル2-2：ディゾルブシェーダー（fBM）](Docs/02_5_2_ResultfBM.png)
+![サンプル2-2：ディゾルブシェーダー（fBM）](Docs/02_Dissolve_fBM.png)
 
 - `Assets/ShaderGraphTutorial/02_Dissolve/Dissolve_fBM_UV.unity`
 
-![サンプル2-3：ディゾルブシェーダー（fBM + 縦方向のUV）](Docs/02_7_1_ResultfBM_UV.png)
+![サンプル2-3：ディゾルブシェーダー（fBM + 縦方向のUV）](Docs/02_Dissolve_fBM_UV.png)
 
 ### サンプル3：ToonシェーダーとCustom Function
 
