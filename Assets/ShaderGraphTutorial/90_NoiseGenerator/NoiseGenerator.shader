@@ -8,7 +8,7 @@ Shader "Unlit/NoiseGenerator"
     SubShader
     {
         Tags { "RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "IgnoreProjector" = "True" "Queue" = "Geometry" }
-        
+
         Pass
         {
             Tags { "LightMode" = "UniversalForward" }
@@ -22,7 +22,7 @@ Shader "Unlit/NoiseGenerator"
             CBUFFER_START(UnityPerMaterial)
                 half4 _TintColor;
             CBUFFER_END
-            
+
             TEXTURE2D(_BaseMap);
             SAMPLER(sampler_BaseMap);
 
@@ -41,16 +41,16 @@ Shader "Unlit/NoiseGenerator"
             v2f vert(appdata v)
             {
                 v2f o;
-                
+
                 o.vertex = float4(v.vertex.xy * 2., 0.5, 1.0);
-                
+
                 o.uv = v.uv;
-                
+
                 // Direct3DのようにUVの上下が反転したプラットフォームを考慮します
                 #if UNITY_UV_STARTS_AT_TOP
                     o.uv.y = 1 - o.uv.y;
                 #endif
-                
+
                 return o;
             }
 
@@ -64,7 +64,7 @@ Shader "Unlit/NoiseGenerator"
             {
                 // This is tiling part, adjusts with the scale
                 p = fmod(p, numCells);
-                
+
                 p = float3(dot(p, float3(127.1, 311.7, 74.7)),
                 dot(p, float3(269.5, 183.3, 246.1)),
                 dot(p, float3(113.5, 271.9, 124.6)));
@@ -79,13 +79,13 @@ Shader "Unlit/NoiseGenerator"
             float Noise(in float3 p, in float numCells)
             {
                 float3 f, i;
-                
+
                 p *= numCells;
 
-                
+
                 f = frac(p);		// Separate integer from fractional
                 i = floor(p);
-                
+
                 float3 u = f * f * (3.0 - 2.0 * f); // Cosine interpolation approximation
 
                 return lerp(lerp(lerp(dot(Hash(i + float3(0.0, 0.0, 0.0), numCells), f - float3(0.0, 0.0, 0.0)),
@@ -103,12 +103,12 @@ Shader "Unlit/NoiseGenerator"
             float NoiseFBM(in float3 p, float numCells, int octaves)
             {
                 float f = 0.0;
-                
+
                 // Change starting scale to any integer value...
                 p = fmod(p, float3(numCells, numCells, numCells));
                 float amp = 0.5;
                 float sum = 0.0;
-                
+
                 for (int i = 0; i < octaves; i++)
                 {
                     f += Noise(p, numCells) * amp;
@@ -121,14 +121,14 @@ Shader "Unlit/NoiseGenerator"
 
                 return f / sum;
             }
-            
+
             float4 frag(v2f input) : SV_Target
             {
                 // float4 col = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, input.uv);
                 float noise = NoiseFBM(float3(input.uv, 0), 10, 10) + 0.5;
-                noise /= 2;
+                // noise /= 2;
                 // float noise = HashALU(floor(float3(input.uv, 0) * 64) / 64, 10);
-                
+
                 return float4(noise, noise, noise, 1);
             }
             ENDHLSL

@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: NoiseGenerator
-  m_Shader: {fileID: 4800000, guid: 647542d062229144fb589525ff7b2a36, type: 3}
+  m_Shader: {fileID: 4800000, guid: feece81000bfdf04ea8561c0a2b95a52, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
